@@ -8,6 +8,7 @@ const router = require('./router/routes.js');
 const pmServer = express();
 pmServer.use(cors());
 pmServer.use(express.json());
+pmServer.use('/uploads', express.static('./uploads')); // for image upload
 
 // ✅ Mount your routes properly
 pmServer.use('/products', router);  // <-- ADD THIS LINE
